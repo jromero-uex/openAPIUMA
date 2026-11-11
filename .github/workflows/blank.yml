@@ -49,13 +49,6 @@ jobs:
         with:
           name: Quantum Services
           path: ./openapi_server.zip
-      - name: Prepare Sonar files
-        run: |
-         git init
-         git config --list   
-         git clone https://github.com/JaimeAlvaradoValiente/sonarQuantumAnalysis.git
-         rm ./sonarQuantumAnalysis/*.py
-         python sonar.py
          
       - name: Check python project
         run: |
